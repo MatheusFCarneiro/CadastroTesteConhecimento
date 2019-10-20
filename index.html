@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste de Conhecimento</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h1>Cadastro</h1>
+    <form name="formcadastro" method="POST" onsubmit="return confirmacao()">
+
+        <div class="form-group" id="name">
+            <label class="col-md-2 control-label" for="Nome">Nome</label>
+            <div class="col-md-3">
+                <input id="Nome" name="Nome" placeholder="Digite Seu Nome..." class="form-control input-md" required type="text">
+
+            </div>
+
+            <div class="form-group col-md-2">
+                <label>CPF</label>
+                <input type="text" name="cpf" class="form-control" placeholder="000.000.000-00" minlength="14" maxlength="14" required onkeypress="$(this).mask('000.000.000-00');">
+            </div>
+
+
+
+            <div class="form-group col-md-3">
+                <label for="inputEmail" class="control-label">Email</label>
+                <input id="inputEmail" name="email" class="form-control" placeholder="Digite seu E-mail..." required type="email">
+
+
+            </div>
+            <br>
+
+            <div class="form-group col-md-1">
+            <class="control-label">Senha</label>
+            <input type="password" class="form-control" name="senha" minlength="6" placeholder="Senha" id="password" required>
+            <input type="password" class="form-control" name="confirmaSenha" minlength="6" placeholder="Confirme Senha" id="confirm_password" required>
+               <br>    
+             <input type="button" value="Confirmar">
+
+
+                
+            </div> <br>
+
+            <label class="col-md-1 control-label" for="radios">Gênero</label>
+            <div class="form-group col-md-4"> <label required="" class="radio-inline" for="radios-0">
+                    <input name="sexo" id="fem" value="feminino" type="radio" required>
+                    Feminino
+                  </label>
+                <label class="radio-inline" for="radios-1">
+                    <input name="sexo" id="masc" value="masculino" type="radio" required  data-error="Você deve marcar este campo!" >
+                    Masculino
+                 </label>
+
+
+            </div>
+
+        </div>
+        <label class="col-md-1 control-label" for="Nome">Nascimento</label>
+        <div class=" form-group col-md-2">
+            <input type="text" name="data" class="form-control" required placeholder="DD/MM/AAAA" onkeypress="$(this).mask('00/00/0000')">
+        </div> <br>
+        <label class="col-md-2 control-label" for="Cadastrar"></label>
+        <div class=" form-group col-md-8">
+            <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="submit" onsubmit="return confirmacao()">Cadastrar</button>
+            <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
+        </div> 
+       
+        </div>
+       <script src="script.js"></script>  
+    </form>
+   
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/bootstrap-notify.min.js" type="text/javascript"></script>
+  </body>
+
+</html>
